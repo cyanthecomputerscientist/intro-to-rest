@@ -37,6 +37,6 @@ public class voteController
     @RequestMapping(value = "/polls/{pollId}/votes", method = RequestMethod.GET)
     public Iterable<Vote> getVote(@PathVariable long pollId)
     {
-        
+       return voterepository.findVotesByPoll(pollId);
     }
 }
